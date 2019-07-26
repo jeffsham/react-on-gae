@@ -1,7 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In addition to the vanilla React App, this also bootstraps a node server configured to run on a different port. This provides a fast way to 
-get started with a server/client development project deployed in tandem.
+This is a simple app that serves a React web application out of the static_dir in app engine and provides a node server for API calls. This example is ready to deploy out of the box to Google App Engine's standard environment.
 
 
 ## Available Scripts
