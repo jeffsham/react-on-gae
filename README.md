@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a simple app that serves a React web application out of the static_dir in app engine and provides a node server for API calls. This example is ready to deploy out of the box to Google App Engine's standard environment.
+This is a simple app that serves a React web application out of the static_dir in app engine and provides an Express server for API calls. This example is ready to deploy out of the box to Google App Engine's standard environment.
 
 
 ## Available Scripts
@@ -31,7 +31,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-The react app deploys entirely in the static_files part of the app.yaml. The nodejs server provides an API at all url patterns prefixed with /api.
+The react app deploys entirely in the static_files part of the app.yaml. The Express server provides an API at all url patterns prefixed with /api.
 To deploy this to app engine run `gcloud app deploy` (see https://cloud.google.com/sdk/docs/quickstarts for installation of the Cloud SDK).
 
 ### `npm run eject`
