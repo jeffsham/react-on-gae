@@ -1,13 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+In addition to the vanilla React App, this also bootstraps a node server configured to run on a different port. This provides a fast way to 
+get started with a server/client development project deployed in tandem.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
-Runs the app in the development mode.<br>
+Runs the app in the development mode and starts a nodejs server.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The Node server can be reached at http://localhost:3001
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
@@ -26,6 +31,9 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+The react app deploys entirely in the static_files part of the app.yaml. The nodejs server provides an API at all url patterns prefixed with /api.
+To deploy this to app engine run `gcloud app deploy` (see https://cloud.google.com/sdk/docs/quickstarts for installation of the Cloud SDK).
 
 ### `npm run eject`
 

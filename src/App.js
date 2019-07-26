@@ -2,25 +2,31 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    fetch('/api/greeting')
+    .then((resp) => {
+            return resp.json();
+        })
+    .then((data)=> {
+      // Log the data just to demonstrate the call works.
+      console.log(data.name);
+    })
+    .catch(function(error) {
+      console.error("Error fetching: ", error);
+    });
+  }
+  
+  render() {
+    return (
+
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
